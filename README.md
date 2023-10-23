@@ -23,3 +23,29 @@
   -필수 항목 검즘(아이디 , 비밀번호)
   -아이디에 해당하는 회원 정보가 있는지 체크
   - 로그인 처리(세션에 회원 정보를 저장)
+
+## 기능 통합
+- 회원 가입 
+  - Controller : /member/join
+    - controllers/member/JoinController
+    - Get : 회원가입 양식
+    - POST : 회원 가입 처리
+    - View : /WEB-INF/templates/member/join.jsp
+- 로그인
+  - Controller : /member/login
+  - controllers/member/LoginController.java
+- 메인 페이지
+  - 로그인한 경우 사용자 명(아이디)님 로그인 메세지 출력
+
+- 로그아웃
+  - controller
+    - controllers/member/LogoutController.java
+    - GET,POST 메서드 상관 없이 기능 할 수 있도록 처리
+
+## 완성
+
+## 회원가입
+
+## 로그인
+
+## 메인페이지
