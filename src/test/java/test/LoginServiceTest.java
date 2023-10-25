@@ -31,6 +31,7 @@ public class LoginServiceTest {
 
     private Member member;
 
+    //테스트 실행이전에 생성하는 메서드
     @BeforeEach
     void init() {
         loginService = ServiceManager.getInstance().loginService();

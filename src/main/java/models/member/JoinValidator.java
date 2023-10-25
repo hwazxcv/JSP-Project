@@ -8,6 +8,8 @@ import commons.Validator;
 public class JoinValidator implements Validator<Member> , RequiredValidator, LengthValidator {
 
     private MemberDAO memberDao;
+
+    // setter메서드 주입
     public void setMemberDao(MemberDAO memberDao){
         this.memberDao = memberDao;
 
@@ -18,6 +20,7 @@ public class JoinValidator implements Validator<Member> , RequiredValidator, Len
         String userId= member.getUserId();
         String userPw = member.getUserPw();
         String confirmUserPw = member .getConfirmUserPw();
+
         //필수 항목 검증
         requiredCheck(userId, new BadRequestException("아이디를 입력하세요"));
         requiredCheck(userPw, new BadRequestException("비밀 번호를 입력하세요"));
