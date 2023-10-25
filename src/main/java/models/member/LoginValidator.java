@@ -7,8 +7,10 @@ import jakarta.servlet.http.HttpServletRequest;
 
 public class LoginValidator implements Validator<HttpServletRequest>, RequiredValidator {
 
+
     private MemberDAO memberDao;
 
+    //생성자 주입
     public LoginValidator(MemberDAO memberDao) {
         this.memberDao = memberDao;
     }

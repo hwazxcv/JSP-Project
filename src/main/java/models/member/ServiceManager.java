@@ -1,5 +1,7 @@
 package models.member;
 
+//객체 조립 클래스
+
 public class ServiceManager {
 
     private static ServiceManager instance;

@@ -6,10 +6,13 @@ import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.Objects;
 
+//회원가입 기능 클래스
+
 public class JoinService {
     private Validator validator;
     private MemberDAO memberDao;
 
+    //생성자 주입
     public JoinService(Validator validator, MemberDAO memberDao) {
         this.validator = validator;
         this.memberDao = memberDao;

@@ -12,11 +12,14 @@ import models.member.ServiceManager;
 
 import java.io.IOException;
 
+
+
 @WebServlet("/member/join")
 public class JoinController extends HttpServlet {
+
+
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/templates/member/join.jsp");
         rd.forward(req, resp);
     }

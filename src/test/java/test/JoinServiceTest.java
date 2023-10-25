@@ -26,8 +26,11 @@ public class JoinServiceTest {
     @Mock
     private HttpServletRequest request;
 
+
+    //테스트 이전에 생성하는 메서드
     @BeforeEach
     void init() {
+        //테스트 실행시 DAO 비우기
         MemberDAO.clearData();
         joinService = ServiceManager.getInstance().joinService();
     }
@@ -68,7 +71,7 @@ public class JoinServiceTest {
     }
 
     @Test
-    @DisplayName("필수 항목 검증(아이디, 비밀번호, 비밀번호 확인, 회원명, 이메일, 회원가입약관 동의), 검증 실패시 BadRequestException 발생")
+    @DisplayName("필수 항목 검증(아이디, 비밀번호, 비밀번호 확인, 회원명, 이메일, 회원가입약관 동의), 검증 실패시 예외발생")
     void requiredFieldCheck() {
         assertAll(
                 () -> {
